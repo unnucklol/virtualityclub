@@ -120,22 +120,21 @@ let questSwiper = new Swiper('.swiper-quest', {
     },
 
     spaceBetween: 15,
+    allowTouchMove: true,
+    grabCursor: true,
 
     slidesPerView: 'auto',
 
     breakpoints: {
         320: {
             centeredSlides: true,
-            allowTouchMove: true,
             spaceBetween: 15,
         },
         768: {
             slidesPerView: 2,
-            allowTouchMove: true,
         },
         993: {
             slidesPerView: 3,
-            allowTouchMove: false,
             spaceBetween: 15,            
         }
     },

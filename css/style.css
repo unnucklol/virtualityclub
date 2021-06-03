@@ -677,11 +677,6 @@ body.lock {
   clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.modes .triangle-top-clip {
-  border-bottom: 35px solid #e5e8f0;
-  border-right: 35px solid #e5e8f0;
-}
-
 .modes__title {
   font-size: 3.6rem;
   text-align: center;
@@ -788,11 +783,6 @@ body.lock {
   clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.discount .triangle-top-clip {
-  border-bottom: 35px solid #151922;
-  border-right: 35px solid #151922;
-}
-
 .discount__bckg-mask {
   position: absolute;
   top: 0;
@@ -862,11 +852,6 @@ body.lock {
   z-index: 4;
   -webkit-clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.faq .triangle-top-clip {
-  border-bottom: 35px solid #151922;
-  border-right: 35px solid #151922;
 }
 
 .faq__content {
