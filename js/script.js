@@ -119,26 +119,32 @@ let questSwiper = new Swiper('.swiper-quest', {
         prevEl: '.swiper-button-prev',
     },
 
+    spaceBetween: 15,
+
+    slidesPerView: 'auto',
+
     breakpoints: {
         320: {
             centeredSlides: true,
             allowTouchMove: true,
+            spaceBetween: 15,
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 0,
             allowTouchMove: true,
         },
         993: {
             slidesPerView: 3,
-            spaceBetween: 15,
-            allowTouchMove: false,            
+            allowTouchMove: false,
+            spaceBetween: 15,            
         }
     },
 
     direction: 'horizontal',
     // Включение параллакс
     parallax: true,
+
+    loop: true,
     
 
     // Скорость
@@ -357,7 +363,7 @@ if (popupLinks.length > 0) {
             } else {
                 e.preventDefault();
             }
-        })
+        });
     }
 }
 

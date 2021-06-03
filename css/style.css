@@ -101,13 +101,13 @@ h6 {
 
 html {
   max-width: 2560px;
-  overflow-x: hidden;
   font-size: 62.5%;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+  overflow-x: hidden;
   color: #000;
 }
 
@@ -198,6 +198,8 @@ body.lock {
 
 .about {
   padding-top: 10rem;
+  position: relative;
+  z-index: 10;
 }
 
 .about__info {
@@ -364,7 +366,9 @@ body.lock {
 .quest {
   background-color: #e5e8f0;
   padding-top: 28.5rem;
-  padding-bottom: 8.7rem;
+  padding-bottom: 12.7rem;
+  position: relative;
+  z-index: 1;
 }
 
 .quest__content {
@@ -419,8 +423,8 @@ body.lock {
 
 .swiper-quest__slide {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 calc((100% - 3rem) / 3);
-  flex: 0 0 calc((100% - 3rem) / 3);
+  -ms-flex: 0 0 calc((100% - 2rem) / 3);
+  flex: 0 0 calc((100% - 2rem) / 3);
 }
 
 .card-quest {
@@ -550,6 +554,7 @@ body.lock {
   align-items: center;
   padding: 2.1rem;
   background-color: #fff;
+  min-height: 213px;
 }
 
 .info-card__title {
@@ -662,9 +667,14 @@ body.lock {
 }
 
 .modes {
+  margin-top: -4rem;
   padding-top: 10.8rem;
   padding-bottom: 13.8rem;
   position: relative;
+  z-index: 4;
+  background-color: #151922;
+  -webkit-clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .modes .triangle-top-clip {
@@ -713,6 +723,8 @@ body.lock {
 
 .left-modes__img {
   display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 25.2rem;
 }
@@ -739,6 +751,8 @@ body.lock {
 
 .right-modes__img {
   display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 25.2rem;
 }
@@ -767,9 +781,11 @@ body.lock {
   background-image: url("../img/discount-bckg.png");
   background-size: cover;
   padding-top: 10.6rem;
-  padding-bottom: 9.2rem;
+  padding-bottom: 12.2rem;
   position: relative;
   z-index: 3;
+  -webkit-clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .discount .triangle-top-clip {
@@ -839,11 +855,13 @@ body.lock {
 }
 
 .faq {
+  margin-top: -3rem;
   background-color: #fff;
   padding-top: 8.2rem;
-  padding-bottom: 16rem;
   position: relative;
-  z-index: 2;
+  z-index: 4;
+  -webkit-clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, calc(50% - 2.5rem) 0%, 50% 3rem, calc(50% + 2.5rem) 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .faq .triangle-top-clip {
@@ -860,7 +878,23 @@ body.lock {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  padding-bottom: 16rem;
   z-index: 100;
+}
+
+.faq__content::after {
+  content: "";
+  display: block;
+  width: 67rem;
+  height: 58.3rem;
+  position: absolute;
+  bottom: 0;
+  left: -25rem;
+  z-index: -1;
+  background-image: url("../img/faq-img2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -30rem;
 }
 
 .faq__top-background {
@@ -975,6 +1009,8 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   width: 100%;
 }
 
@@ -995,7 +1031,9 @@ body.lock {
 
 .feedback-faq__form-field {
   padding-left: 20rem;
-  width: 100%;
+  width: 75%;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 .feedback-faq__form {
@@ -1004,13 +1042,13 @@ body.lock {
 }
 
 .feedback-faq__form textarea {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #8D8D8D;
   width: 100%;
   border: 1px solid #8D8D8D;
   border-top: none;
   min-height: 8rem;
-  padding: 1.5rem 1rem 1.5rem 2rem;
+  padding: 1.2rem 2.7rem;
   max-width: 100%;
   min-width: 100%;
   max-height: 30rem;
@@ -1044,9 +1082,9 @@ body.lock {
 }
 
 .feedback-faq__row input {
-  padding: 1.5rem 0 1.5rem 1.5rem;
+  padding: 1.2rem 2.7rem;
   margin: 1rem 0;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border-left: 1px solid #8D8D8D;
   color: #8D8D8D;
 }
@@ -1075,22 +1113,22 @@ body.lock {
   color: #8D8D8D;
 }
 
-.feedback-faq__input-name,
-.feedback-faq__input-tel {
+.feedback-faq__input-email {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
 }
 
 .feedback-faq__submit-btn {
   font-family: "Magistral C";
   font-weight: 700;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   line-height: 6.1rem;
-  width: 33.333%;
+  width: 25%;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  text-transform: uppercase;
   background-color: #3886BE;
   -webkit-transition: opacity .3s ease 0s;
   -o-transition: opacity .3s ease 0s;
@@ -1099,8 +1137,8 @@ body.lock {
 
 .popup {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
@@ -1247,28 +1285,6 @@ body.lock {
   }
 }
 
-@media (min-width: 1920px) {
-  .faq::after {
-    content: "";
-    display: block;
-    width: 67rem;
-    height: 58.3rem;
-    position: absolute;
-    bottom: 0;
-    left: 10rem;
-    z-index: 0;
-    background-image: url("../img/faq-img2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -30rem;
-  }
-
-  .feedback-faq {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-  }
-}
-
 @media (min-width: 1921px) {
   .intro__title {
     margin-bottom: 20rem;
@@ -1309,6 +1325,14 @@ body.lock {
 
   .card-quest__btn-sign {
     margin-bottom: 3rem;
+  }
+
+  .left-modes__img {
+    height: 20rem;
+  }
+
+  .right-modes__img {
+    height: 20rem;
   }
 }
 
@@ -1371,32 +1395,35 @@ body.lock {
 @media (max-width: 992px) {
   .swiper-quest__slide {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc((100% - 2rem) / 2);
-    flex: 0 0 calc((100% - 2rem) / 2);
-  }
-
-  .card-quest {
-    margin-left: 1.5rem;
-  }
-
-  .card-quest:first-child {
-    margin-left: 0;
+    -ms-flex: 0 0 calc((100% - 3rem) / 2);
+    flex: 0 0 calc((100% - 3rem) / 2);
   }
 
   .swiper-button-prev {
-    display: none;
+    position: static;
   }
 
   .swiper-button-next {
-    display: none;
+    position: static;
+    margin-left: 6rem;
+  }
+
+  .swiper-buttons_container {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .left-modes__img {
-    height: 21rem;
+    height: 19rem;
   }
 
   .right-modes__img {
-    height: 21rem;
+    height: 19rem;
   }
 }
 
@@ -1413,8 +1440,8 @@ body.lock {
 
   .swiper-quest__slide {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 98.9%;
-    flex: 0 0 98.9%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 
   .modes {
@@ -1437,7 +1464,7 @@ body.lock {
   }
 
   .modes__right {
-    margin-top: 10rem;
+    margin-top: 7rem;
   }
 
   .left-modes__img {
@@ -1446,6 +1473,10 @@ body.lock {
 
   .right-modes__img {
     height: 23rem;
+  }
+
+  .faq__content::after {
+    display: none;
   }
 
   .faq__top-img {
@@ -1469,7 +1500,17 @@ body.lock {
     padding-left: 0;
   }
 
+  .feedback-faq__form-field {
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .feedback-faq__form textarea {
+    min-height: 11rem;
+  }
+
   .feedback-faq__row input {
+    font-size: 1.6rem;
     border-left: none;
     border-radius: none;
     border-bottom: 1px solid #8D8D8D;
@@ -1515,11 +1556,13 @@ body.lock {
 
 @media (max-width: 576) {
   .left-modes__img {
-    height: 19rem;
+    width: auto;
+    height: auto;
   }
 
   .right-modes__img {
-    height: 19rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -1549,7 +1592,4 @@ body.lock {
 
 .webp .discount { background-image: url(../img/discount-bckg.webp); }
 
-@media (min-width: 1920px) {
-
-  .webp .faq::after { background-image: url(../img/faq-img2.webp); }
-}
+.webp .faq__content::after { background-image: url(../img/faq-img2.webp); }
